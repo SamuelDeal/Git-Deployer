@@ -1,0 +1,20 @@
+# Config file sample for Git-Deployer v1.4
+[gds]
+	listen		    = localhost
+	port		    = 32337
+	pidfile		    = /var/run/gds.pid
+	logfile		    = /var/log/gds.log
+    # You can define a specific command to run on deployement
+    # Otherwise, the launched script will be (ordered by preference):
+    #  - ${SCRIPT_FOLDER}/${PROJECT}_${BRANCH} '${PROJECT}' '${BRANCH}'
+    #  - ${SCRIPT_FOLDER}/${PROJECT} '${PROJECT}' '${BRANCH}'
+    #  - ${SCRIPT_FOLDER}/default '${PROJECT}' '${BRANCH}'
+    #
+    # exec            = '${SCRIPT_FOLDER}/web-deploy.pl' '${PROJECT}' '${BRANCH}'
+
+[env]
+    # You can define whatever environment variable, 
+    # which will be available for deployement script
+    test = toto
+
+

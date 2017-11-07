@@ -166,8 +166,7 @@ my @wp_files = ();
 	$project = $ARGV[0]."/".$ARGV[1] if(defined $ARGV[0] and defined $ARGV[1] and defined trimperso($config->{$ARGV[0]."/".$ARGV[1]}) );	
 
 	# Initializing "project" variable via GDS.
-	if (defined $config->{"$_PROJECT/$_BRANCH"}
-	) {
+	if (defined $config->{"$_PROJECT/$_BRANCH"}) {
 		$project = "$_PROJECT/$_BRANCH";
 	}
 

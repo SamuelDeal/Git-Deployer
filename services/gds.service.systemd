@@ -1,0 +1,10 @@
+[Unit]
+Description=Git Deployer Server
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/gds/GDS.pl -d
+
+[Install]
+WantedBy=multi-user.target

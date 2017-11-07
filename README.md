@@ -41,17 +41,18 @@ To install them :
 
 
 ```
-$ perl -MCPAN -e shell
-> install Config::Auto
-> install File::Find
-> install MIME::Lite
-> install Proc::Daemon
-> install Net::SMTP::TLS
-> install Net::SMTP::SSL
-> install File::LibMagic
+$ apt-get install libmagic-dev
+$ echo 'CPAN::install(Config::Auto) &&                             
+CPAN::install(File::Find) &&
+CPAN::install(MIME::Lite) &&
+CPAN::install(Proc::Daemon) &&
+CPAN::install(Net::SMTP::TLS) &&
+CPAN::install(Net::SMTP::SSL) &&
+CPAN::install(File::LibMagic) &&
+print "Everyting installed !!";' | sudo perl -I /usr/lib/perl5 -MCPAN
 ```
 
-or for Debian :
+or Debian packages directly:
 
 ```
 $ apt-get install libmime-lite-perl libconfig-auto-perl libfile-finder-perl libproc-daemon-perl libnet-smtp-tls-perl libnet-smtp-ssl-perl libmagic-dev cpanm
