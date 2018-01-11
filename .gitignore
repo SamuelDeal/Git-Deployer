@@ -1,4 +1,11 @@
-
+# config files
 GDS.config
-scripts/*.config
+scripts/*
+
+# by default, we don't add hidden files
+.*
+
+# keep important files
+!.gitignore
+!.keep
 

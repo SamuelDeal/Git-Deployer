@@ -4,7 +4,7 @@ After=network.target
 
 [Service]
 Type=simple
-ExecStart=/usr/local/gds/GDS.pl -d
+ExecStart=/usr/local/Git-Deployer/GDS.pl
 
 [Install]
 WantedBy=multi-user.target
